@@ -5,9 +5,30 @@ module.exports = {
     config: {
         exports: [
             './scripts/demo1.js',
-            './styles/demo1.scss'
+            './src/styles/demo1-1.css',
+            './scripts/demo1-1.js',
+            './scripts/demo5.js',
+            './styles/demo1.scss',
+            './styles/demo4.css'
         ],
         modifyWebpackConfig: function(baseConfig) {
+            var ENV_PARAMS = {};
+            switch (this.env) {
+                case 'local':
+                    ENV_PARAMS = {name: 'local'};
+                    break;
+                case 'dev':
+                    ENV_PARAMS = {name: 'dev'};
+                    break;
+                case 'prd':
+                    ENV_PARAMS = {name: 'prd'};
+                    break;
+                default:
+            }
+
+            baseConfig.plugins.push(new this.webpack.DefinePlugin({
+                ENV_PARAMS: JSON.stringify(ENV_PARAMS)
+            }));
             return baseConfig
         },
         sync: {
