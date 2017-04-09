@@ -7,9 +7,13 @@ module.exports = {
             './scripts/demo1.js',
             './src/styles/demo1-1.css',
             './scripts/demo1-1.js',
+            './scripts/demo3.js',
             './scripts/demo5.js',
             './styles/demo1.scss',
-            './styles/demo4.css'
+            './styles/demo4.css',
+            './scripts/demo4.js',
+            './scripts/main.js',
+            './scripts/worker.js'
         ],
         modifyWebpackConfig: function(baseConfig) {
             var ENV_PARAMS = {};
@@ -33,7 +37,7 @@ module.exports = {
         },
         sync: {
             host : "192.168.237.71",
-            path: "/home/q/www/qunarzz.com/ykit-seed-qunar"
+            path: "/home/q/www/qunarzz.com/webperformance"
         }
     },
     hooks: {},

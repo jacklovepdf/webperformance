@@ -1,4 +1,9 @@
-.yellow {background-color: yellow;}
-.blue {color: blue;}
-.big { font-size: 8em; }
-.bold { font-weight: bold; }
+.app {
+    background-color: red;
+}
+#header {
+    font-size: 30px;
+}
+#content {
+    font-size: 20px;
+}
