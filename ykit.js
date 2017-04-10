@@ -13,7 +13,9 @@ module.exports = {
             './styles/demo4.css',
             './scripts/demo4.js',
             './scripts/main.js',
-            './scripts/worker.js'
+            './scripts/worker.js',
+            './scripts/demo6.js',
+            './scripts/demo6-1.js'
         ],
         modifyWebpackConfig: function(baseConfig) {
             var ENV_PARAMS = {};
